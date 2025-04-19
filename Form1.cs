@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Siemens.Simatic.Simulation.Runtime;
 
 namespace PLC_Simulador_de_Tren_Tia_Portal
 {
@@ -15,6 +16,11 @@ namespace PLC_Simulador_de_Tren_Tia_Portal
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void btn_createPLC_Click(object sender, EventArgs e)
+        {
+            SimulationRuntimeManager.RegisterInstance(txtBox_PLCName.Text);
         }
     }
 }
